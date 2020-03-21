@@ -4,7 +4,7 @@ import pokemons.Pokemon;
 
 public class Water implements Boosters {
     private String Name = "Water Bottle";
-    private int Bonus = 25;
+    private int Bonus = 10;
 
     @Override
     public void use(Player UserPlayer) {

@@ -3,7 +3,7 @@ package items;
 import players.Player;
 
 public class CrystalPepsi implements Boosters {
-    private int Bonus = 60;
+    private int Bonus = 40;
     private String Name = "Crystal Pepsi";
     @Override
     public void use(Player UserPlayer) {
