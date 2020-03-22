@@ -235,7 +235,10 @@ public class Master implements ActionListener {
     private void CheckIfUserNeedsSwap()
     {
         //If User's pokemon has 0 HitPoints, we swap his pokemon
-        if(User.getCurrentPokemon().getHitPoints()==0)
+        //If User's pokemon has 0 HitPoints, we swap his pokemon
+        if(User.getCurrentPokemon().getHitPoints()==0 &&
+                ((User.getPokemon1().equals(User.getCurrentPokemon()) && User.getPokemon2().getHitPoints()!=0)||
+                        (User.getPokemon2().equals(User.getCurrentPokemon()) && User.getPokemon1().getHitPoints()!=0)))
         {
             if(User.getCurrentPokemon().equals(User.getPokemon1()))
             {
