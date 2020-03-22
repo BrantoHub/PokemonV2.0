@@ -30,17 +30,24 @@ public class Computer extends Player
     {
         String Statement ="";
         if(getCurrentPokemon().getHitPoints()==0){
-            Statement = getCurrentPokemon().getName() + " has fainted!";
-            Switch();
+            Statement = getCurrentPokemon().getName() + " has fainted! ";
+            //If the other pokemon is not dead, switch pokemons.
+            if(getCurrentPokemon().equals(getPokemon1()) && getPokemon2().getHitPoints()!=0 ||
+                    getCurrentPokemon().equals(getPokemon2()) && getPokemon1().getHitPoints()!=0) {
+                Switch();
+                Statement += "Computer switched his pokemon to " + getCurrentPokemon().getName() + ". ";
+            }
         }
-        // If my current pokemon's Hit Points is less than or equal to 10
-        if(getCurrentPokemon().getHitPoints()<= 25 && getCurrentPokemon().getHitPoints()>= 10)
+        // If my current pokemon's Hit Points is less than or equal to 25 and not 0
+        else if(getCurrentPokemon().getHitPoints()<= 25 && getCurrentPokemon().getHitPoints()> 0 &&
+                (getCurrentPokemon().equals(getPokemon1()) && getPokemon2().getHitPoints()!=0 ||
+                getCurrentPokemon().equals(getPokemon2()) && getPokemon1().getHitPoints()!=0))
         {
             Switch();
             Statement = "Computer switched his pokemon to "+ getCurrentPokemon().getName() + ". ";
         }
         //if a booster is found
-        if(BoosterIsFound() && getCurrentPokemon().getHitPoints()<100)
+        if(BoosterIsFound() && getCurrentPokemon().getHitPoints()<100 && getCurrentPokemon().getHitPoints()!=0)
         {
             Boosters boosterFound = getBooster();
             boosterFound.use(this);
@@ -48,7 +55,7 @@ public class Computer extends Player
 
         }
         //If an Item is found
-        if (ItemFound())
+        if (ItemFound() && getCurrentPokemon().getHitPoints()!=0)
         {
             //get that item ad set button property to same text
             Weapons weaponFound= GetItem();
@@ -57,7 +64,7 @@ public class Computer extends Player
 
         }
         // if anything else
-        else
+        else if(getCurrentPokemon().getHitPoints()!=0)
         {
             //Attack if the attack is not missed
             if(!getCurrentPokemon().getAttacksList().get(0).Missed()) {

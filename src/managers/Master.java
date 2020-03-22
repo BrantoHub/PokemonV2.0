@@ -55,6 +55,7 @@ public class Master implements ActionListener {
                 Statement1 = "Your attack missed the Pokemon!";
             }
             Statement2 = Comp.Reply(User);
+            CheckIfUserNeedsSwap();
             Gui.UpdateHealth();
             Gui.UpdateImages();
             Gui.updateBoostersandItems();
@@ -75,6 +76,7 @@ public class Master implements ActionListener {
                 Statement1 = "The Computer's Pokemon missed your attack!";
             }
             Statement2 = Comp.Reply(User);
+            CheckIfUserNeedsSwap();
             Gui.UpdateHealth();
             Gui.UpdateImages();
             Gui.updateBoostersandItems();
@@ -95,6 +97,7 @@ public class Master implements ActionListener {
                 Statement1 = "The Computer's Pokemon missed your attack!";
             }
             Statement2 = Comp.Reply(User);
+            CheckIfUserNeedsSwap();
             Gui.UpdateHealth();
             Gui.UpdateImages();
             Gui.updateBoostersandItems();
@@ -116,6 +119,7 @@ public class Master implements ActionListener {
                 Statement1 = "The Computer's Pokemon missed your attack!";
             }
             Statement2 = Comp.Reply(User);
+            CheckIfUserNeedsSwap();
             Gui.UpdateHealth();
             Gui.UpdateImages();
             Gui.updateBoostersandItems();
@@ -136,7 +140,6 @@ public class Master implements ActionListener {
             Gui.UpdateHealth();
             Gui.UpdateAttacks();
             Gui.UpdateImages();
-            Gui.UpdateAttacks();
             Gui.updateBoostersandItems();
 
         }
@@ -159,6 +162,7 @@ public class Master implements ActionListener {
             Gui.getWeaponFound().Use(Comp.getCurrentPokemon());
             Statement1 = "Your Pokemon found a "+ Gui.getWeaponFound().getName() +" and used it on " + Comp.getCurrentPokemon().getName();
             Statement2 = Comp.Reply(User);
+            CheckIfUserNeedsSwap();
             Gui.UpdateImages();
             //update health on screen
             Gui.UpdateHealth();
@@ -171,31 +175,6 @@ public class Master implements ActionListener {
 
     private void CheckIfGameIsOver()
     {
-        //If User's pokemon has 0 HitPoints, the game is over
-        if(User.getCurrentPokemon().getHitPoints()==0)
-        {
-            if(User.getCurrentPokemon().equals(User.getPokemon1()))
-            {
-                User.setCurrentPokemon(User.getPokemon2());
-                Statement1 = "Your " + User.getPokemon1().getName() + " has fainted! ";
-                Statement2 = "Sending out " + User.getPokemon2().getName() + "!";
-                Gui.UpdateImages();
-                CompileStatements(Statement1, Statement2);
-            }
-            else if(User.getCurrentPokemon().equals(User.getPokemon2()))
-            {
-                User.setCurrentPokemon(User.getPokemon1());
-                Statement1 = "Your " + User.getPokemon2().getName() +  " has fainted! ";
-                Statement2 = "Sending out " + User.getPokemon1().getName() + "!";
-                Gui.UpdateImages();
-                CompileStatements(Statement1, Statement2);
-            }
-            Gui.UpdateHealth();
-            Gui.UpdateAttacks();
-            Gui.UpdateImages();
-            Gui.UpdateAttacks();
-            Gui.updateBoostersandItems();
-        }
         if(User.getPokemon1().getHitPoints()==0 && User.getPokemon2().getHitPoints()==0)
         {
             int response = JOptionPane.showConfirmDialog(null, "You Lost! Play again?", "Game Over",
@@ -212,7 +191,7 @@ public class Master implements ActionListener {
             }
         }
         //If Computer's pokemon is dead User wins!
-        else if(Comp.getCurrentPokemon().getHitPoints()==0)
+        else if(Comp.getPokemon1().getHitPoints()==0 && Comp.getPokemon2().getHitPoints()==0)
         {
             int response = JOptionPane.showConfirmDialog(null, "You won! Play again?", "Congrats!",
                     JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -243,5 +222,27 @@ public class Master implements ActionListener {
             STATEMENT = "<html><ul><li>"+statement2+"</li></ul></html>";
         }
         Gui.UpdateStatement(STATEMENT);
+    }
+    private void CheckIfUserNeedsSwap()
+    {
+        //If User's pokemon has 0 HitPoints, the game is over
+        if(User.getCurrentPokemon().getHitPoints()==0)
+        {
+            if(User.getCurrentPokemon().equals(User.getPokemon1()))
+            {
+                User.setCurrentPokemon(User.getPokemon2());
+
+            }
+            else if(User.getCurrentPokemon().equals(User.getPokemon2()))
+            {
+                User.setCurrentPokemon(User.getPokemon1());
+
+            }
+            Gui.UpdateHealth();
+            Gui.UpdateAttacks();
+            Gui.UpdateImages();
+            Statement2 += ". Your pokemon has fainted! " + "We swapped your pokemon to " + User.getCurrentPokemon().getName() + "!";
+            Gui.updateBoostersandItems();
+        }
     }
 }

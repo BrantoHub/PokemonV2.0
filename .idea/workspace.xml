@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d5f9a352-5c32-4696-8fbf-eaf1b5e58296" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/items/CrystalPepsi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/CrystalPepsi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/items/Pepsi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/Pepsi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/items/Water.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/Water.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pokemon/items/CrystalPepsi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pokemon/items/CrystalPepsi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pokemon/items/Pepsi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pokemon/items/Pepsi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pokemon/items/Water.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pokemon/items/Water.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/managers/Master.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/managers/Master.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/players/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/players/Computer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,15 +23,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/items/EnergyDrink.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/items/Pepsi.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -38,7 +31,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/players/Player.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="509">
@@ -52,6 +45,35 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/players/Computer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="66" column="16" lean-forward="true" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Pokemon/src/players/Computer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-153" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/managers/Master.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="676">
+              <caret line="243" column="115" selection-start-line="243" selection-start-column="115" selection-end-line="243" selection-end-column="115" />
+              <folding>
+                <element signature="method#CheckIfGameIsOver#0;class#Master#0" />
+                <element signature="method#CompileStatements#0;class#Master#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,24 +92,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/items/Boosters.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/items/Hammer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="4" column="37" lean-forward="true" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -119,6 +123,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>checkifuser</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -138,11 +147,11 @@
         <option value="$PROJECT_DIR$/src/players/Player.java" />
         <option value="$PROJECT_DIR$/src/items/EmptyPepsi.java" />
         <option value="$PROJECT_DIR$/src/items/OrganicDrink.java" />
-        <option value="$PROJECT_DIR$/src/managers/Master.java" />
-        <option value="$PROJECT_DIR$/src/players/Computer.java" />
         <option value="$PROJECT_DIR$/src/items/CrystalPepsi.java" />
         <option value="$PROJECT_DIR$/src/items/Pepsi.java" />
         <option value="$PROJECT_DIR$/src/items/Water.java" />
+        <option value="$PROJECT_DIR$/src/managers/Master.java" />
+        <option value="$PROJECT_DIR$/src/players/Computer.java" />
       </list>
     </option>
   </component>
@@ -174,13 +183,13 @@
               <item name="PokemonV2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="PokemonV2.0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="items" type="462c0819:PsiDirectoryNode" />
+              <item name="managers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PokemonV2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="PokemonV2.0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pokemons" type="462c0819:PsiDirectoryNode" />
+              <item name="players" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -243,7 +252,7 @@
       <updated>1584812548829</updated>
       <workItem from="1584812552096" duration="1729000" />
       <workItem from="1584814284918" duration="11548000" />
-      <workItem from="1584832180438" duration="295000" />
+      <workItem from="1584832180438" duration="3428000" />
     </task>
     <task id="LOCAL-00001" summary="Added the boosters and items to the Array and instantiated them for use.">
       <created>1584820935469</created>
@@ -259,16 +268,24 @@
       <option name="project" value="LOCAL" />
       <updated>1584825043019</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- Switches automattically now if your pokemon has fainted &#10;- small text changes so that it will now tell you when the opponent pokemon has fainted&#10;- changed the reaction of the computer so that now it only switches between 10 and 25 health">
+      <created>1584832497392</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584832497392</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13572000" />
+    <option name="totallyTimeSpent" value="16705000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16414523" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16414523" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -278,14 +295,14 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.33172303" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.14170693" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5015129" side_tool="true" visible="true" weight="0.33172303" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5015129" side_tool="true" visible="true" weight="0.14170693" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
@@ -365,13 +382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/managers/Master.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3111">
-          <caret line="193" column="32" selection-start-line="193" selection-start-column="32" selection-end-line="193" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pokemons/Pokemon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -397,13 +407,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/players/Computer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -523,6 +526,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="509">
           <caret line="81" column="36" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Pokemon/src/players/Computer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/managers/Master.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="243" column="115" selection-start-line="243" selection-start-column="115" selection-end-line="243" selection-end-column="115" />
+          <folding>
+            <element signature="method#CheckIfGameIsOver#0;class#Master#0" />
+            <element signature="method#CompileStatements#0;class#Master#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/players/Computer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="66" column="16" lean-forward="true" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
         </state>
       </provider>
     </entry>
