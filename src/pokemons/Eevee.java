@@ -1,6 +1,9 @@
 package pokemons;
 
-
+/**
+ * Eevee pokemon class.
+ * A child of pokemon.
+ */
 public class Eevee extends Pokemon
 {
     public Eevee()

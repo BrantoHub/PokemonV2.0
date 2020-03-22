@@ -1,9 +1,11 @@
 package managers;
 
-import GUI.InformationGui;
 import GUI.LandingGui;
-
 import javax.swing.*;
+
+/**
+ * Purpose: main class that has the main function that calls the first Gui to appear
+ */
 
 public class Main {
 

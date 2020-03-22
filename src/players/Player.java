@@ -4,6 +4,11 @@ import pokemons.*;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * Purpose: player is an ABSTRACT class that is used to declare both a user and a computer. It is a generic image of
+ * what a player should do. Functions are described in details.
+ */
+
 public abstract class Player
 {
     //Fields

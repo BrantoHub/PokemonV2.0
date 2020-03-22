@@ -1,5 +1,9 @@
 package pokemons;
 
+/**
+ * Pikachu Pokemon class.
+ * a child of pokemon
+ */
 public class Pikachu extends Pokemon
 {
     public Pikachu()

@@ -7,10 +7,16 @@ import players.Computer;
 import players.Player;
 import players.User;
 import pokemons.*;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+/**
+ * Listener class that listens to the actions called from the
+ * InformationGUI. In this class, radio buttons are listened to gather correct information
+ * and initialize the right players. User is prohibited from making mistakes in putting  his/her
+ * information.
+ */
 
 public class Listener implements ActionListener
 {

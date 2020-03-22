@@ -2,9 +2,13 @@ package players;
 import items.Boosters;
 import items.Weapons;
 import pokemons.*;
-
-import java.sql.Statement;
 import java.util.Random;
+
+/**
+ * Purpose: Computer class is a child of Player and it is used to think and take decisions based on what the user does.
+ * decisions are described in details in the reply function. Also, this class is associated with and called
+ * from the Master class
+ */
 
 public class Computer extends Player
 {
@@ -29,7 +33,9 @@ public class Computer extends Player
     public String Reply(Player User)
     {
         String Statement ="";
+        //If pokemon's hit points is 0
         if(getCurrentPokemon().getHitPoints()==0){
+            //Pokemon faints and event is handled in the master
             Statement = getCurrentPokemon().getName() + " has fainted! ";
             //If the other pokemon is not dead, switch pokemons.
             if(getCurrentPokemon().equals(getPokemon1()) && getPokemon2().getHitPoints()!=0 ||
@@ -38,7 +44,8 @@ public class Computer extends Player
                 Statement += "Computer switched his pokemon to " + getCurrentPokemon().getName() + ". ";
             }
         }
-        // If my current pokemon's Hit Points is less than or equal to 25 and not 0
+        // If my current pokemon's Hit Points is less than or equal to 25 and not 0 and I have another alive pokemon, switch
+        // to that alive pokemon
         else if(getCurrentPokemon().getHitPoints()<= 25 && getCurrentPokemon().getHitPoints()> 0 &&
                 (getCurrentPokemon().equals(getPokemon1()) && getPokemon2().getHitPoints()!=0 ||
                 getCurrentPokemon().equals(getPokemon2()) && getPokemon1().getHitPoints()!=0))
@@ -63,7 +70,7 @@ public class Computer extends Player
             Statement += getCurrentPokemon().getName()+ " Found a " + weaponFound.getName() + " and used it on you! ";
 
         }
-        // if anything else
+        // if none of these, play an attacki if my hitpoints are not 0
         else if(getCurrentPokemon().getHitPoints()!=0)
         {
             //Attack if the attack is not missed
@@ -74,7 +81,7 @@ public class Computer extends Player
                 if(attack.getPowerPoints()!=0)
                     found = true;
                 int counter =0;
-                //if the attack's powerpoints !=0
+                //while the attack's powerpoints =0 keep finding a random attack that I can play
                 while(!found)
                 {
                     Random random2 = new Random();

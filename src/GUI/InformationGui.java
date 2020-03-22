@@ -4,6 +4,15 @@ import players.Player;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Purpose: This class is intended to get the information from the
+ * user to initialize the two main players in the game;
+ * The computer and The user which will be used in the battleGui.
+ * In this class, BattleGUI is called after the user
+ * enters correct information and User object gets created successfully.
+ * Also, computer object is initialized and
+ * passed as a parameter to battleGui.
+ */
 public class InformationGui extends JFrame
 {
     //Fields

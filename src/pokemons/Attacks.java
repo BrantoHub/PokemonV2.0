@@ -1,6 +1,10 @@
 package pokemons;
-// Attacks class generates a number of hit point every time the function getHitPoint
-// is called which makes the game feel more real.
+/**
+ * Attacks class generates a number of hit point every time the function getHitPoint
+ * is called to make the game more fair between the user and the computer.
+ * Functions are described below in detail.
+  */
+
 public class Attacks {
     //Field variables
     private String Name;
@@ -29,7 +33,7 @@ public class Attacks {
     public void setName(String name) {
         Name = name;
     }
-
+    // An attack is used if the attack is not missed
     public void Use(Pokemon Opponent)
     {
         Damage = (int)(Math.random() * (max - min + 1) + min);
@@ -39,6 +43,7 @@ public class Attacks {
         else
             Opponent.setHitPoints(0);
     }
+    //function that decreases the powerpoints by 1
     public void setPowerPoints()
     {
         PowerPoints-=1;
@@ -47,6 +52,8 @@ public class Attacks {
     {
         return PowerPoints;
     }
+    // Checks to see if an attack is not missed.
+    //there is a 20% chance for every attack call to be missed
     public boolean Missed()
     {
         int chance = (int)(Math.random() * (100 - min + 1) + 1);

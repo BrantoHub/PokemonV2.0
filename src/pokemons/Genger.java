@@ -1,5 +1,9 @@
 package pokemons;
 
+/**
+ * Genger pokemon class.
+ * A child of pokemon
+ */
 public class Genger extends Pokemon
 {
     public Genger()

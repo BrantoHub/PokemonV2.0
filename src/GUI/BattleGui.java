@@ -4,14 +4,19 @@ import items.Weapons;
 import managers.Master;
 import players.Computer;
 import players.Player;
-import players.User;
-import pokemons.Attacks;
-
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
+
+/**
+ * Purpose: Class is the main GUI that displays the game.
+ * This game is initiated from the Information GUI class.
+ * After a player is declared in Information GUI with the user's selection of name and
+ * 2 favorite pokemons to use, the players are initiated
+ * in InformationGui and sent as parameters to BattleGui.
+ * BattleGUI is associated with master that listens to the
+ * buttons and performs actions upon them using the player class.
+ */
 
 public class BattleGui extends JFrame
 {

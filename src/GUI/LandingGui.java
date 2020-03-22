@@ -4,6 +4,12 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
+/**
+ * Purpose:Class is intended to display
+ * the rules that we have created for this game.
+ * That is also the first GUI that appears when the application runs.
+ */
+
 public class LandingGui extends JFrame
 {
     private JLabel title;
@@ -36,14 +42,15 @@ public class LandingGui extends JFrame
         JPanel CenterPanel = new JPanel();
         //This is an HTML string that will be added in the middle of the screen
         String INFO = "<html><p>Welcome to Kareem and Kyle's version of Pokemon!</p>"+
-                "<p>We are so glad that you arrived here safely after suffering from other projects..</p>"+
+                "<p>We are so glad that you arrived here safely after playing with other projects..</p>"+
                 "<p>Now, we know how excited you are to play our game, but trust me, you are not excited as I am because"+
                 " this thing took us a lot of time! Anyway.. before we start, we would like to give you some information of how this works!"+
                 "</p><ul><li>you start off with 2 pokemons of your choice and you play against the computer.</li><li> The attacks" +
                 " that you use have a 25% chance of being a miss.</li> <li>there is a 25% chance for you to find an item after every hit</li>" +
                 "<li> There is also a 20% chance for you to find a booster and use it to upgrade your health!</li>"+"<li> your list of attacks are associated with the pokemon that you choose. Meaning, each Pokemon has its own "+
                 " attacks.</li><li>Every time you attack, the attack causes a random number of damage between a range that I have decided.</li>"+
-                "<li> When your attack button disappear, means that you have used all power points for this particular attack.</li></ul>"+
+                "<li> When your attack button disappear, means that you have used all power points for this particular attack.</li>"+
+                "<li> The game automatically assigns your pokemon to the spare pokemon if your pokemon faints.</li></ul>"+
                 "<p> Click Next to enter your information and Choose your pokemons!</p></html>";
         //add the string to the JLabel
         JLabel LabelInfo = new JLabel(INFO);

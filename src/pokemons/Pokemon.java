@@ -1,6 +1,10 @@
 package pokemons;
 import java.util.ArrayList;
 
+/**
+ * Generic pokemon class that is a parent of all pokemons.
+ * Functions are described below.
+ */
 public abstract class Pokemon
 {
     //Field Variables for pokemons

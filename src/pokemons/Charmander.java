@@ -1,6 +1,9 @@
 package pokemons;
 
-
+/**
+ * Charmander pokemon class.
+ * a Child of Pokemon.
+ */
 public class Charmander extends Pokemon
 {
     public Charmander()

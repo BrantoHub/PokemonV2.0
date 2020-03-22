@@ -2,15 +2,21 @@ package managers;
 
 import GUI.BattleGui;
 import GUI.InformationGui;
-import items.Boosters;
 import players.Computer;
 import players.*;
 import pokemons.Attacks;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+
+/**
+ * Purpose: master class that controls all what happens during the game, including:
+ * handling actions by the user, updating features in the battleGui, getting actions
+ * from the computer and checking to see if the game is over.
+ * If the game is over and the user chooses to play again, InformationGui is called and the user plays again.
+ * if user chooses not to play again, the BattleGui class is disposed and program closes.
+ */
 
 public class Master implements ActionListener {
     private BattleGui Gui;
@@ -175,6 +181,8 @@ public class Master implements ActionListener {
 
     private void CheckIfGameIsOver()
     {
+        // if both pokemons used by the user are fainted, end the game
+        // and ask the user for his input on whether or not to start a new game through a JOptionPane
         if(User.getPokemon1().getHitPoints()==0 && User.getPokemon2().getHitPoints()==0)
         {
             int response = JOptionPane.showConfirmDialog(null, "You Lost! Play again?", "Game Over",
@@ -190,7 +198,8 @@ public class Master implements ActionListener {
                 System.exit(0);
             }
         }
-        //If Computer's pokemon is dead User wins!
+        // if both pokemons used by the computer are fainted, end the game
+        // and ask the user for his input on whether or not to start a new game through a JOptionPane
         else if(Comp.getPokemon1().getHitPoints()==0 && Comp.getPokemon2().getHitPoints()==0)
         {
             int response = JOptionPane.showConfirmDialog(null, "You won! Play again?", "Congrats!",
@@ -225,7 +234,7 @@ public class Master implements ActionListener {
     }
     private void CheckIfUserNeedsSwap()
     {
-        //If User's pokemon has 0 HitPoints, the game is over
+        //If User's pokemon has 0 HitPoints, we swap his pokemon
         if(User.getCurrentPokemon().getHitPoints()==0)
         {
             if(User.getCurrentPokemon().equals(User.getPokemon1()))
